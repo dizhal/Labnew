@@ -1,6 +1,6 @@
 package Lab1;
 
-//Proverka gitignore
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 
