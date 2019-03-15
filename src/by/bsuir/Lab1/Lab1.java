@@ -1,4 +1,4 @@
-package Lab1;
+package by.bsuir.Lab1;
 
 //Hello
 import javafx.application.Application;
