@@ -23,28 +23,31 @@ public class MyGridPane {
 	private TextField tend_interval;
 	private Button btn1;
 	
+	private static final String SIN="sin(x)dx";
+	private static final String BEGIN="Начало интервала";
+	private static final String END="Конец интервала";
+	private static final String INTEGRAL="Интеграл ";
+	private static final String NAME_BUTTON="Интегрировать";
+	
 	public MyGridPane() {
 
-    	root = new GridPane();  
+    	root = new GridPane();    
     	
-    	sin = new Label("sin(x)dx");
-    	
-        begin_interval = new Label("Начало интервала");
-        
-        end_interval = new Label("Конец интервала");
-        
-        inter = new Label("Интеграл ");
+    	sin = new Label(SIN);
+        begin_interval = new Label(BEGIN);     
+        end_interval = new Label(END);        
+        inter = new Label(INTEGRAL);
         
         tbegin_interval=new TextField();
         tend_interval=new TextField();
         
         btn1 = new Button();
-		btn1.setText("Интегрировать");
+		btn1.setText(NAME_BUTTON);
 		
 		scene = new Scene(root, 400, 150);
 	}
 	
-	public void positioning_elements() {
+	public void positioningElements() {
     	GridPane.setMargin(sin, new Insets(20));
         GridPane.setMargin(begin_interval, new Insets(20));
         GridPane.setMargin(end_interval, new Insets(20));
@@ -59,7 +62,7 @@ public class MyGridPane {
 		root.getRowConstraints().add(new RowConstraints(40));
 	}
 	
-	public void add_elements() {
+	public void addElements() {
 		root.add(sin,0, 0);
 		root.add(begin_interval, 0, 1);
 		root.add(end_interval, 0,2);
@@ -69,18 +72,19 @@ public class MyGridPane {
         root.add(btn1, 1, 3);
 	}
 	
-	public void button_work() {
+	public void buttonWork() {
 		btn1.setOnAction(new EventHandler<ActionEvent>() {
-  		  
+			
     	    public void handle(ActionEvent event) {
     	    Integer from=Integer.parseInt(tbegin_interval.getText());
     	    Integer to=Integer.parseInt(tend_interval.getText());
     	    inter.setText("Интеграл  " + (to-from)*(Math.sin(to)+Math.sin(from))/2);
+    	    
     		}		
     	});
 	}
 	
-	public Scene get_scene() {
+	public Scene getScene() {
 		return scene;
 	}
  

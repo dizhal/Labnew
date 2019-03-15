@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 public class Lab1 extends Application {
 	
 	private MyGridPane grid;
+	private static final String NAME_TITLE="Lab1";
 	
     public static void main(String[] args) {
         launch(args);
@@ -16,14 +17,12 @@ public class Lab1 extends Application {
     	
     	grid=new MyGridPane();
     	
-    	grid.positioning_elements();
-    	grid.add_elements();
-    	grid.button_work();
+    	grid.positioningElements();
+    	grid.addElements();
+    	grid.buttonWork();
     	
-    	primaryStage.setScene(grid.get_scene());
-    	
-        primaryStage.setTitle("Lab1");
-         
+    	primaryStage.setScene(grid.getScene());	
+        primaryStage.setTitle(NAME_TITLE);        
         primaryStage.show();
     }
 }
