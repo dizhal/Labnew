@@ -29,17 +29,17 @@ public class MyGridPane {
     	
     	sin = new Label("sin(x)dx");
     	
-        begin_interval = new Label("Начало интервала");
+        begin_interval = new Label("РќР°С‡Р°Р»Рѕ РёРЅС‚РµСЂРІР°Р»Р°");
         
-        end_interval = new Label("Конец интервала");
+        end_interval = new Label("РљРѕРЅРµС† РёРЅС‚РµСЂРІР°Р»Р°");
         
-        inter = new Label("Интеграл");
+        inter = new Label("РРЅС‚РµРіСЂР°Р» ");
         
         tbegin_interval=new TextField();
         tend_interval=new TextField();
         
         btn1 = new Button();
-		btn1.setText("Интегрировать");
+		btn1.setText("РРЅС‚РµРіСЂРёСЂРѕРІР°С‚СЊ");
 		
 		scene = new Scene(root, 400, 150);
 	}
@@ -75,7 +75,7 @@ public class MyGridPane {
     	    public void handle(ActionEvent event) {
     	    Integer from=Integer.parseInt(tbegin_interval.getText());
     	    Integer to=Integer.parseInt(tend_interval.getText());
-    	    inter.setText("Интеграл " + (to-from)*(Math.sin(to)+Math.sin(from))/2);
+    	    inter.setText("РРЅС‚РµРіСЂР°Р»  " + (to-from)*(Math.sin(to)+Math.sin(from))/2);
     		}		
     	});
 	}
